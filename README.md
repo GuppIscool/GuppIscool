@@ -1,4 +1,10 @@
+--[[
 
+	. by Gupp © CC0 1.0 Universal (2023)
+
+	https://github.com/Exunys
+
+]]
 
 --// Cache
 
@@ -47,11 +53,11 @@ local MainFrame = Library:CreateWindow({
 --// Tabs
 
 local AimbotTab = MainFrame:CreateTab({
-	Name = "Aimbot"
+	Name = "Aim"
 })
 
 local VisualsTab = MainFrame:CreateTab({
-	Name = "Visuals"
+	Name = "Esp"
 })
 
 local CrosshairTab = MainFrame:CreateTab({
@@ -897,19 +903,4 @@ FunctionsSection:AddButton({
 	Name = "Copy Script Page",
 	Callback = function()
 		setclipboard("https://github.com/Exunys/AirHub")
-	end
-})
-
---// AirHub V2 Prompt
-
-do
-	local Aux = Instance.new("BindableFunction")
-    
-	Aux.OnInvoke = function(Answer)
-		if Answer == "No" then
-			return
-		end
-
-		Library.Unload()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub-V2/main/src/Main.lua"))()
 	end
